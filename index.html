@@ -1,20 +1,23 @@
-<!DOCTYPE html>
 <html>
-
-<head>
-    <link type="text/css" href="styles.css" rel="stylesheet">
-</head>
-
-<body>
-    <div id="audioPlayer">
-        <canvas id="analyzer"></canvas>
-        <div id="player"></div>
-        <div id="waveformContainer">
-            <div id="seekPosition"></div>            
-        </div>
-    </div>
-
-    <script src="scripts.js"></script>
-</body>
-
+	<head>
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script src="https://iplock.weebly.com/uploads/9/5/7/3/95731436/marshmello_-_alone.mp3"></script>
+		<script>
+			window.onload = function() {
+				shore({
+					source: 'source',
+					view: 'visualisation',
+					color: '#FF2C00',
+					scale: 0.4
+				});
+			};
+		</script>
+	</head>
+	<body>
+		
+		<audio id="source" controls>
+  			<source src="bird.wav" type="audio/wav">
+		</audio>
+		<canvas id="visualisation" width="800" height="200"></canvas>
+	</body>
 </html>
